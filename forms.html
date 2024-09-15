@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        dl{
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+        }
+        dt{
+            padding: 5px;
+            margin-bottom: 10px;
+            margin-left: 250px;
+            font-size: 17px;
+            font-weight: bold;
+            
+        }
+        dd{
+            margin-bottom: 20px;
+        }
+        form{
+            background-color: rgb(180, 251, 251);
+            height: 2000px;
+        }
+        legend{
+            text-align: center;
+        }
+        fieldset{
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: none;
+        }
+        input{
+            margin-bottom: 20px;
+            margin-right: 10px;
+        }
+        ul{
+            list-style: none;
+            width: 250px;
+            height: 100px;
+            overflow: auto;
+        
+        }
+        button{
+            margin-left: 250px;
+        }
+        meter{
+            width: 200px;
+        }
+        section{
+            margin-left: 250px;
+            margin-top: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+       
+        <fieldset>
+            <legend><h1>School Admission Form</h1></legend>
+            <dl>
+                <dt>Student's Name: </dt>
+                    <dd><input type="text" placeholder=" First" required> <input type="text" placeholder=" Last" required></dd>
+                <dt>Class you want to <br>apply for: </dt>
+                    <dd><input type="number" placeholder="9"required></dd>
+                <dt>Student's DoB: </dt>
+                    <dd><input   type="date" placeholder=" MM/DD/YYYY"required></dd> 
+                <dt>Current Address: </dt>
+                    <dd><textarea rows="3"  cols="46" placeholder="Street Address Line" size="48" required></textarea><br>
+                        <input type="text" placeholder="Street Addredd Line 2"size="48" required><br>
+                        <input type="text" placeholder="City"required> <input type="text" placeholder="Region"required><br>
+                        <input  type="text" placeholder="Postal / Zip Code"required><input type="text" placeholder="Country"required>
+                <dt>Phone: </dt>
+                    <dd><input  pattern="\+91\d{10}" placeholder="+91XXXXXXXXXX" size="48" required> </dd>
+                <dt>Email: </dt>
+                    <dd><input type="email" size="48" placeholder="Email Address"></dd>
+                <dt>Gender: </dt>
+                    <dd><input type="radio" name="Gender"required><label>Male</label> <input type="radio" name="Gender"required><label>Female</label> </dd>
+                <dt>Hobbies:</dt>
+                    <dd><ul>
+                        <li><input type="checkbox" name="Hobbies"><label>Sports</label></li>
+                        <li><input type="checkbox" name="Hobbies"><label>Dancing</label></li>
+                        <li><input type="checkbox" name="Hobbies"><label>Singing</label></li>
+                        <li><input type="checkbox" name="Hobbies"><label>Art and Craft</label></li>
+                        <li><input type="checkbox" name="Hobbies"><label>Reading</label></li>
+                    </ul></dd>
+                <dt>Previous School Name:</dt>
+                    <dd>
+                        <select  name="School" multiple >
+                            <option>Choose one</option>
+                            <optgroup label="CBSE">
+                                <option value="cbse">DAV</option>
+                                <option value="cbse">SKP</option>
+                                <option value="cbse">KV</option>
+                                <option value="cbse">DPS</option>
+                            </optgroup>
+                            <optgroup label="ICSE">
+                                <option value="icse">St. Francis</option>
+                                <option value="icse">Mount Carmel School</option>
+                                <option value="icse">Dev International School</option>
+                            </optgroup>
+                        </select>
+                    </dd>
+                
+                </dl>
+            <button type="submit">Submit</button> <button type="reset">Reset</button>
+            <dl>
+                <dt>Prepraing for Download</dt>
+                    <dd><progress></progress></dd>
+                <dt>40% completed</dt>
+                <dd><progress min="1" max="100" value="40"></progress></dd>
+            </dl>
+
+            <section>
+                <h2>Reviews and Rating</h2>
+                <div>
+                    <label>5</label>
+                    <span class="bi bi-star-fill"></span>
+                    <meter min="1" max="100" value="100"></meter>
+                    <label>159</label>
+                </div>
+                <div>
+                    <label>4</label>
+                    <span class="bi bi-star-fill"></span>
+                    <meter min="1" max="100" value="30"></meter>
+                    <label>60</label>
+                </div>
+                <div>
+                    <label>2</label>
+                    <span class="bi bi-star-fill"></span>
+                    <meter min="1" max="100" low="40" high="80" value="100"></meter>
+                    <label>20</label>
+                </div>
+                <div>
+                    <label>1</label>
+                    <span class="bi bi-star-fill"></span>
+                    <meter min="1" max="100"  low="60" high="80" value="100"></meter>
+                </div>
+            </section>
+            
+        </fieldset>
+        
+       
+    </form>
+</body>
+</html>
